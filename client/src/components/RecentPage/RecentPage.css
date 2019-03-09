@@ -1,0 +1,11 @@
+.paper {
+    padding: 10px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+#addButton {
+    position: fixed;
+    bottom: 40px;
+    right: 40px
+}
