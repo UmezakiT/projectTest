@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const jwt = require('_helpers/jwt');
 const errorHandler = require('_helpers/error-handler');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 
 var allowCrossDomain = function(req, res, next) {
@@ -42,7 +42,4 @@ const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });
 
-app.listen(PORT, function() {
-    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-  });
-  
+app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));
