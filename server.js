@@ -49,4 +49,4 @@ const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });
 
-app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));
+app.listen(port, () => console.log(`Now listening on http://localhost:${port}`));
