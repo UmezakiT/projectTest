@@ -1,0 +1,261 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+	"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+	sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #333;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+}
+
+.main-content {
+	padding: 1em;
+	flex-grow: 1;
+	overflow: auto;
+}
+
+.header {
+	background-color: #eceaad;
+	color: #000;
+	flex-grow: 0;
+}
+
+.header a {
+	color: black;
+	text-decoration: none;
+}
+.header a:hover {
+	text-decoration: underline;
+}
+
+
+.header ul {
+	display: flex;
+	flex-direction: row;
+	padding: 1em 0.5em;
+}
+
+.header ul li.nav-item {
+	margin: 0 0.5em;
+	font-size: 1.4em;
+}
+
+/* user list */
+
+.user-list {
+	display: flex;
+	flex-direction: column;
+	max-width: 30em;
+}
+
+.user-list > .user:nth-child(1) {
+	border-top-width: 1px;
+}
+
+.user-list .user {
+	border: 1px solid #b394bc;
+	border-top-width: 0;
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.bar {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 3px;
+}
+
+.user-list .user .info{
+	
+}
+
+.user-list .user .info h3{
+	margin-bottom: 0.5em;
+	
+	
+}
+
+.user-list .user .links {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.user-list .user .links * {
+	color: #222!important;
+	margin-left: 1em;
+}
+
+/* todo list */
+
+.todo-list {
+	display: flex;
+	flex-direction: column;
+	max-width: 30em;
+}
+
+.todo-list > .todo:nth-child(1) {
+	border-top-width: 1px;
+}
+
+.todo-list .todo {
+	border: 1px solid #b394bc;
+	border-top-width: 0;
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+
+.todo-list .todo img{
+	max-width: 30px;
+	max-height: 30px;
+}
+
+.todo-list .todo .completed-status {
+	display: flex;
+	align-items: center;
+}
+
+
+/* post list */
+
+.post-list {
+	display: flex;
+	flex-direction: column;
+	max-width: 30em;
+}
+
+.post-list > .post:nth-child(1) {
+	border-top-width: 1px;
+}
+
+.post-list .post {
+	border: 1px solid #b394bc;
+	border-top-width: 0;
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.post-list .post h1, h2, h3, h4 {
+	margin: 0;
+}
+
+.post-list .post h3 {
+	margin-bottom: 0.5em;
+}
+
+.post-list .post h4 {
+	font-weight: normal;
+}
+
+/* loading indicator */
+
+.loading-indicator {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	transition: all ease-in-out 0.2s;
+}
+
+.loading-indicator.shown {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.loading-indicator.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.loading-indicator .bk {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: white;
+	opacity: 0.6;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	transform: translate(-50%, -50%);
+
+	width: 50px;
+	height: 40px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.spinner > div {
+	background-color: #266b89;
+	height: 100%;
+	width: 6px;
+	display: inline-block;
+
+	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+	animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+	0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+	20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+	0%, 40%, 100% { 
+		transform: scaleY(0.4);
+		-webkit-transform: scaleY(0.4);
+		}  20% { 
+			transform: scaleY(1.0);
+			-webkit-transform: scaleY(1.0);
+		}
+	}
